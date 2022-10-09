@@ -5,7 +5,8 @@
 // The following js-functions were used at the HTML_Mockup webpages
 // of the same name during testing of the backend and the communication.
 // ------------------------------------------------------------------
-var responsivewidth = 1000; // Measured in pixels, must be the same as  in the base.scss
+var responsivewidth = 1000; // Measured in pixels, must be the same as  in the base.settings.scss
+var minimumheight = 100;    // Measured in pixels
 // ------------------------------------------------------------------
 
 // ==================================================================
@@ -106,7 +107,7 @@ function addaptiveResponse() {
         $titleHeight = $('.wrapperTitle');
         var wrapperTitleHeight= windowCurrentHeight/8;
         var wrapperTitleWidth= windowCurrentWidth/10;
-        $titleHeight.css("height", wrapperTitleHeight);
+        $titleHeight.css("height", Math.max(wrapperTitleHeight, minimumheight));
         
         // Adjust the horizontal div-elements which represent the menu
         if (wrapperTitleWidth>40) {wrapperTitleWidth=40;}
@@ -117,11 +118,14 @@ function addaptiveResponse() {
         $menuDivs.css("border-radius", wrapperTitleWidth/7);
 
         // Adjust the div of the torus image when menu is hidden
-        $('#torusImageDIV').css("height",wrapperTitleHeight);
+        $('#torusImageDIV').css("height", Math.max(wrapperTitleHeight, minimumheight));
 
         // Adjust the size of my name
         $('#myName').css("font-size", windowCurrentWidth/15);
         $('#myName').height(); // This command update the height of h1 when resizing
+       // $('#myName').css("padding-top", windowCurrentWidth/30);
+       // $('#myName').css("margin-top", windowCurrentWidth/30);
+        //$('#myName').css("padding-bottom", windowCurrentHeight/100);
 
         // Adjust the size of my Profession
         $('#myProfession').css("font-size", windowCurrentWidth/40);
@@ -131,7 +135,7 @@ function addaptiveResponse() {
         var $specialIcons = $('.specialIcons');
         var fontSspecialIconsH = windowCurrentHeight/20;
         if (fontSspecialIconsH>40){fontSspecialIconsH=40}
-        $specialIcons.css("height", fontSspecialIconsH);
+        $specialIcons.css("height", Math.max(fontSspecialIconsH, minimumheight/3));
         $specialIcons.css("margin", fontSspecialIconsH/10);
         $specialIcons.css("padding", fontSspecialIconsH/10);
 
@@ -145,6 +149,14 @@ function addaptiveResponse() {
         img.width = windowCurrentWidth/2;
         img.height = windowCurrentWidth/2;
         img.style.display ="block";
+
+
+        var $firstBlock = $('.topLeftOfContainer');
+        $firstBlock.css("margin-top", 0);
+        $firstBlock.css("top", windowCurrentHeight/30);
+
+
+
 
 
         // TEMP

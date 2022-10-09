@@ -7,9 +7,9 @@
 @import "./base.graphics";
 
 html{
-
     background-size: cover;
     background-color: black;//$color3;
+    //min-height: 500px;
 }
 
 // Set header font weights
@@ -280,7 +280,6 @@ padding-right: 0px;
 
 
 .temp{
-    color: white;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -288,6 +287,7 @@ padding-right: 0px;
     position: relative;
     text-align: center;
     color: white;
+    background-color: red;
 }
 
 #backgroundImage{
@@ -299,6 +299,14 @@ padding-right: 0px;
 
 .topLeftOfContainer{
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 0%;
+    left: 10%;
+    right: 10%;
+}
+
+.topLeftOfContainer2{
+    position: absolute;
+    //top: 50%;
+    left: 10%;
+    right: 10%;
 }

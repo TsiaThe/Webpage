@@ -206,13 +206,13 @@ body {
 }
 
 .temp {
-  color: white;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   position: relative;
   text-align: center;
   color: white;
+  background-color: red;
 }
 
 #backgroundImage {
@@ -223,8 +223,15 @@ body {
 
 .topLeftOfContainer {
   position: absolute;
-  top: 8px;
-  left: 16px;
+  top: 0%;
+  left: 10%;
+  right: 10%;
+}
+
+.topLeftOfContainer2 {
+  position: absolute;
+  left: 10%;
+  right: 10%;
 }
 
 blockquote {
