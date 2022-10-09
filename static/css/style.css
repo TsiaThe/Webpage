@@ -210,7 +210,7 @@ body {
 .temp {
   position: relative;
   text-align: center;
-  color: white;
+  margin-top: 2%;
 }
 
 #backgroundImage {
@@ -220,7 +220,7 @@ body {
 .topLeftOfContainer {
   position: absolute;
   overflow: scroll;
-  height: 500px;
+  height: 100%;
   left: 5%;
   right: 5%;
 }
@@ -228,6 +228,18 @@ body {
 p {
   color: grey;
   opacity: 1;
+}
+
+.h_line {
+  width: 100%;
+  height: 1px;
+  background: grey;
+}
+
+.tempClass {
+  position: relative;
+  text-align: center;
+  margin-top: 2%;
 }
 
 .wrapperElement {

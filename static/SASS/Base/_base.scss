@@ -286,7 +286,9 @@ padding-right: 0px;
 
     position: relative;
     text-align: center;
-    color: white;
+    margin-top: 2%;
+    //border: 1px solid grey;
+    //border-radius: 20px;
 }
 
 #backgroundImage{
@@ -299,7 +301,7 @@ padding-right: 0px;
 .topLeftOfContainer{
     position: absolute;
     overflow: scroll;
-    height: 500px;
+    height: 100%;
     left: 5%;
     right: 5%;
 }
@@ -309,11 +311,28 @@ p{
     opacity: 1;
 }
 
+.h_line{
+    width:100%; height:1px; background: grey; 
+}
+
+
+.tempClass{
+    //margin-left: auto;
+    //margin-right: auto;
+
+    position: relative;
+    text-align: center;
+    margin-top: 2%;
+    //border: 1px solid grey;
+    //border-radius: 20px;
+}
 
 
 
 
 
+
+// Kept only for naming inspiration
 .wrapperElement{
     display: flex;
     padding: 0px 0px 0px 0px;
