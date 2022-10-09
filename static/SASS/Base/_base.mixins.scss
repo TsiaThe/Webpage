@@ -1,0 +1,16 @@
+@mixin vendor($property, $value){
+
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+
+}
+
+// In case you want to pass multiple parameters then you specify the funciton as below:
+// @mixin vendor($property, $value...){ // the dots allow multiple values to be passed (array)
+// 
+//     -webkit-#{$property}: nth($value,1); // Selection of the 1st parameter passed...
+//     -moz-#{$property}: $value;
+//     -ms-#{$property}: $value;
+// 
+// }

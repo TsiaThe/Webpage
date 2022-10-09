@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* SCSS RGB */
+/* SCSS Gradient */
+/* SCSS RGB */
+/* SCSS Gradient */
+html {
+  background-color: rgb(178, 139, 132);
+}
+
+a {
+  color: rgb(255, 200, 87);
+}
+a:hover {
+  color: white;
+}
+
+.box, .rounded-box {
+  background: rgb(84, 94, 117);
+  padding: 24px;
+}
+
+.rounded-box {
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+}
+
+html {
+  background-size: cover;
+  background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 5% auto;
+  color: gray;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 57.6px;
+}
+
+h3 {
+  font-size: 52.8px;
+}
+
+h4 {
+  font-size: 48px;
+}
+
+h5 {
+  font-size: 35.2px;
+}
+
+h6 {
+  font-size: 24px;
+}
+
+body {
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.navBarGrid {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.wrapperTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: black;
+}
+
+.dropdownDIVSG {
+  margin-right: auto;
+}
+
+#torusImageDIV {
+  display: flex;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1000px) {
+  #torusImageDIV {
+    display: none;
+  }
+}
+
+#torusImage {
+  position: relative;
+  border-style: solid;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#myBtn {
+  background-color: black;
+  border-color: black;
+  border-style: solid;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+@media only screen and (min-width: 1000px) {
+  #myBtn {
+    display: none;
+  }
+}
+
+#myBtn div {
+  border-color: grey;
+  border-style: solid;
+}
+
+.specialIconsGroup {
+  margin-left: auto;
+}
+
+.specialIcons {
+  display: block;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.listElementG {
+  text-align: center;
+  border-color: blue;
+  color: gray;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border-style: solid;
+  margin: 0.3%;
+  background-color: black;
+  text-decoration: none;
+}
+
+.listElementG:hover {
+  background-color: rgb(50, 48, 48);
+  border-style: dashed;
+  color: white;
+}
+
+.navList {
+  display: flex;
+  list-style: outside none none;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: red;
+}
+@media only screen and (max-width: 1000px) {
+  .navList {
+    display: none;
+    position: absolute;
+  }
+}
+
+.listElementH {
+  width: 10%;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+}
+
+.listElementV {
+  border-width: 2px;
+  font-size: 15px;
+  width: 100px;
+  margin-top: 5%;
+}
+
+.wrapperMainImage {
+  align-items: center;
+}
+
+h5 {
+  margin: 0px auto;
+  text-align: center;
+}
+
+blockquote {
+  border-left: 2px solid rgb(255, 200, 87);
+  padding-left: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */

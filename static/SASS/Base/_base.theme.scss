@@ -1,0 +1,15 @@
+@import "./base.palette";
+
+html{
+    background-color: $color3;
+}
+
+a{
+    color:$color2;
+
+    &:hover
+    {
+        color:white;
+    }
+
+}

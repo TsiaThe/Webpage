@@ -1,0 +1,14 @@
+@use "sass:math";
+
+$homeImageWidth: 833px;
+$homeImageHeight: 400px;
+
+.box{
+    background: $color1;
+    padding: $spacing-normal;
+}
+
+.rounded-box{
+    @extend .box;
+    @include vendor(border-radius,$spacing-normal);
+}
