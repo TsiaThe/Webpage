@@ -26,6 +26,8 @@ a:hover {
 html {
   background-size: cover;
   background-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -206,32 +208,42 @@ body {
 }
 
 .temp {
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
   position: relative;
   text-align: center;
   color: white;
-  background-color: red;
 }
 
 #backgroundImage {
-  margin-left: auto;
-  margin-right: auto;
   opacity: 0.5;
 }
 
 .topLeftOfContainer {
   position: absolute;
-  top: 0%;
-  left: 10%;
-  right: 10%;
+  overflow: scroll;
+  height: 500px;
+  left: 5%;
+  right: 5%;
 }
 
-.topLeftOfContainer2 {
-  position: absolute;
-  left: 10%;
-  right: 10%;
+p {
+  color: grey;
+  opacity: 1;
+}
+
+.wrapperElement {
+  display: flex;
+  padding: 0px 0px 0px 0px;
+  background-color: black;
+  display: flex;
+  text-align: center;
+}
+
+.wrapperElement_L1C1 {
+  padding: 0px 0px 0px 0px;
+}
+
+.wrapperElement_L1C2 {
+  padding: 0px 0px 0px 0px;
 }
 
 blockquote {

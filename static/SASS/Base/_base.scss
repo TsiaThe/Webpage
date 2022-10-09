@@ -9,10 +9,11 @@
 html{
     background-size: cover;
     background-color: black;//$color3;
-    //min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-// Set header font weights
+// Set default header font weights
 h1, h2, h3, h4, h5, h6{
     font-weight: $font-weight-headers;   
     margin: 5% auto;
@@ -73,7 +74,7 @@ body{
 
 // wrapperTitle: contains:
 // - dropdown menu
-// - name
+// - name and profession
 // - special icons (Giuthub, LinkedIn)
 .wrapperTitle{
     display: flex;
@@ -280,33 +281,51 @@ padding-right: 0px;
 
 
 .temp{
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    //margin-left: auto;
+    //margin-right: auto;
 
     position: relative;
     text-align: center;
     color: white;
-    background-color: red;
 }
 
 #backgroundImage{
-    margin-left: auto;
-    margin-right: auto;
+   // margin-left: auto;
+   // margin-right: auto;
+   //margin-top: 10%;
     opacity: 0.5;
-
 }
 
 .topLeftOfContainer{
     position: absolute;
-    top: 0%;
-    left: 10%;
-    right: 10%;
+    overflow: scroll;
+    height: 500px;
+    left: 5%;
+    right: 5%;
 }
 
-.topLeftOfContainer2{
-    position: absolute;
-    //top: 50%;
-    left: 10%;
-    right: 10%;
+p{
+    color:grey;
+    opacity: 1;
 }
+
+
+
+
+
+
+.wrapperElement{
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    background-color: black;
+    display: flex;
+    text-align: center;
+}
+
+.wrapperElement_L1C1{
+    padding: 0px 0px 0px 0px;
+}
+
+.wrapperElement_L1C2{
+    padding: 0px 0px 0px 0px;
+}    
