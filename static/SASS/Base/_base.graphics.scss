@@ -7,8 +7,3 @@ $homeImageHeight: 400px;
     background: $color1;
     padding: $spacing-normal;
 }
-
-.rounded-box{
-    @extend .box;
-    @include vendor(border-radius,$spacing-normal);
-}

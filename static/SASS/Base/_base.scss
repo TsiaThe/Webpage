@@ -137,9 +137,9 @@ padding-right: 0px;
 
 // menuDIV1-3: Menu Divs ids
 // Currently only js code
-#menuDIV1{}
-#menuDIV2{}
-#menuDIV3{}
+// #menuDIV1{}
+// #menuDIV2{}
+// #menuDIV3{}
 // Grabbing all menuDivs at once
 #myBtn div{
     border-color: grey;
@@ -147,9 +147,21 @@ padding-right: 0px;
 }
 // ----------------------------------------
 
+// NameAndProfession: id with the div which contains 
+// my Name and my Profession. Centers the h-elements
+ #NameAndProfession{
+    text-align: center;
+ }
+// ----------------------------------------
+
 // myName: id with my Name
 // Currently only js
-#myName{}
+// #myName{}
+// ----------------------------------------
+
+// myProfession: id with my Profession(s)
+// Currently only js
+// #myProfession{}
 // ----------------------------------------
 
 // specialIconsGroup: Group with special icons (LinkedIn, GitHub)
@@ -199,13 +211,12 @@ padding-right: 0px;
 //             --------------------------
 // ===================================================
 
-// navList: The DIV for the horizontal navigation list
+// §st: The DIV for the horizontal navigation list
 .navList{
     display: flex;
     list-style: outside none none;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: red;
 
     @media only screen and (max-width: $responsiveWidth){
         display: none;
@@ -234,7 +245,7 @@ padding-right: 0px;
 
 // dropdownContent_id: of the dropdown menu
 // Currently only js
-#dropdownContent_id{}
+// #dropdownContent_id{}
 // ----------------------------------------
 
 // The display options for the dropdown menu
@@ -261,13 +272,33 @@ padding-right: 0px;
 
 .wrapperMainImage{
     align-items: center;
+
 }
 
 // ===================================================
 // TEMP AND TESTING
 
-h5{
-    margin: 0px auto;
+
+.temp{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+    position: relative;
     text-align: center;
+    color: white;
 }
 
+#backgroundImage{
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+
+}
+
+.topLeftOfContainer{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}

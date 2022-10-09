@@ -123,6 +123,10 @@ function addaptiveResponse() {
         $('#myName').css("font-size", windowCurrentWidth/15);
         $('#myName').height(); // This command update the height of h1 when resizing
 
+        // Adjust the size of my Profession
+        $('#myProfession').css("font-size", windowCurrentWidth/40);
+        $('#myProfession').height(); // This command update the height of h1 when resizing
+
         // Adjust the size of the LinkedIn and GitHub icons
         var $specialIcons = $('.specialIcons');
         var fontSspecialIconsH = windowCurrentHeight/20;
@@ -131,6 +135,19 @@ function addaptiveResponse() {
         $specialIcons.css("margin", fontSspecialIconsH/10);
         $specialIcons.css("padding", fontSspecialIconsH/10);
 
+
+        // --------------------------------------------
+        // TEMP
+        // --------------------------------------------
+        var $temp = $('.temp');
+        var img = document.getElementById("backgroundImage");
+
+        img.width = windowCurrentWidth/2;
+        img.height = windowCurrentWidth/2;
+        img.style.display ="block";
+
+
+        // TEMP
     });
 
 

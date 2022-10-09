@@ -18,15 +18,9 @@ a:hover {
   color: white;
 }
 
-.box, .rounded-box {
+.box {
   background: rgb(84, 94, 117);
   padding: 24px;
-}
-
-.rounded-box {
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
 }
 
 html {
@@ -138,6 +132,10 @@ body {
   border-style: solid;
 }
 
+#NameAndProfession {
+  text-align: center;
+}
+
 .specialIconsGroup {
   margin-left: auto;
 }
@@ -173,7 +171,6 @@ body {
   list-style: outside none none;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: red;
 }
 @media only screen and (max-width: 1000px) {
   .navList {
@@ -208,9 +205,26 @@ body {
   align-items: center;
 }
 
-h5 {
-  margin: 0px auto;
+.temp {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  position: relative;
   text-align: center;
+  color: white;
+}
+
+#backgroundImage {
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+}
+
+.topLeftOfContainer {
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
 blockquote {
