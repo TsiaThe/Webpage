@@ -1,67 +1,11 @@
 // ------------------------------------------------------------------
 // Author: Theofanis Tsiantas
 // Description:
-// The following js-functions were used at the HTML_Mockup webpages
-// of the same name during testing of the backend and the communication.
+// ?????
 // ------------------------------------------------------------------
 var responsivewidth = 1000; // Measured in pixels, must be the same as  in the base.settings.scss
 var minimumheight = 100;    // Measured in pixels
 // ------------------------------------------------------------------
-
-// ==================================================================
-//                    Funcction: verticalMenuShow
-//                    ---------------------------
-// This function shows or hides the vertical menu when the user clicks 
-// on the 3 divs. It uses jQuery, too.
-// ==================================================================
-function verticalMenuShow() {
-
-    // jquery funciton
-    $(document).ready(function(){
-        
-        var $dropDownContentID = $('#dropdownContent_id');
-        var topMenuDIVWdth = $('#menuDIV1').width();
-
-        // Show content, if hidden
-        if ($dropDownContentID.css("display")=="none"){
-            $dropDownContentID.css("display","block");
-            var listElements = document.getElementsByClassName("listElementV");
-            for (i = 0; i < listElements.length; i++) {
-                var currentElement = listElements[i];
-                currentElement.style.display ="block";
-            }
-            // Change the width of the last two div-elements by clicking
-            $('#menuDIV2').css("width",2*topMenuDIVWdth/3);
-            $('#menuDIV3').css("width",1*topMenuDIVWdth/3);
-        } // Hide content, if shown
-        else{
-            // Reset the width of the last two div-elements by clicking
-            $('#menuDIV2').css("width",topMenuDIVWdth);
-            $('#menuDIV3').css("width",topMenuDIVWdth);
-            hideElements();
-        }
-    }
-)
-}
-
-// ==================================================================
-//                       Funcction: hideElements
-//                       -----------------------
-// This function hides all vertical menu items. It is used when the 
-// menu button is re-clicked or if the window width>responsive width.
-// ==================================================================
-function hideElements(){
-    //document.getElementById("dropdownContent_id").style.display="none";
-    $('#dropdownContent_id').css("display","none");
-
-    var listElements = document.getElementsByClassName("listElementV");
-    for (i = 0; i < listElements.length; i++) {
-        var currentElement = listElements[i];
-        if (currentElement.style.display ="block") {
-            currentElement.style.display ="none";
-        }
-    }
-}
 
 // ==================================================================
 //                       Funcction: addaptiveResponse
@@ -126,6 +70,7 @@ function addaptiveResponse() {
         $('#myProfession').css("font-size", windowCurrentWidth/30);
         $('#myProfession').height(); // This command update the height of h1 when resizing
 
+        
         // Adjust the size of the LinkedIn and GitHub icons
         var $specialIcons = $('.specialIcons');
         var fontSspecialIconsH = windowCurrentHeight/20;
@@ -149,6 +94,11 @@ function addaptiveResponse() {
         // Text in relation to image
         var $groupText = $('.groupText');
         $groupText.css("top", 0);
+
+        // Making the header distances inside the group a bit smaller
+        var $h5 = $("h5");
+        $h5.css("margin-top", windowCurrentHeight/40);
+        $h5.css("margin-bottom", windowCurrentHeight/40);
 
         // Horizontal line separator - make long enough
         $("#hid").css("width", windowCurrentWidth);
