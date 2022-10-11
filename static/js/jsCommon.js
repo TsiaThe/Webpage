@@ -1,6 +1,5 @@
 // ------------------------------------------------------------------
 // Author: Theofanis Tsiantas
-// Developemt span: 27.12.2021 - 05.01.2022
 // Description:
 // The following js-functions were used at the HTML_Mockup webpages
 // of the same name during testing of the backend and the communication.
@@ -87,21 +86,20 @@ function addaptiveResponse() {
     // jQuery function
     $(document).ready(function(){
 
-        // Adjust the title height
+        // Adjust the size of the emblym
         var $photo = $('#torusImgID');
         var photoWidth = windowCurrentWidth/3;
         if (photoWidth>500){
             photoWidth=500;
         }
 
+        // Make it square
         $photo.css("width", photoWidth);
         $photo.css("height", photoWidth);
 
+        // Add some padding
         var photoPadding = 0.5*(windowCurrentWidth-photoWidth);
         $photo.css("padding-left", photoPadding);
-        // ----- CHECK -----
-
-
 
         // Adjust the title height
         $titleHeight = $('.wrapperTitle');
@@ -136,15 +134,11 @@ function addaptiveResponse() {
         $specialIcons.css("margin", fontSspecialIconsH/10);
         $specialIcons.css("padding", fontSspecialIconsH/10);
 
+        // Group (image+text) of page
+        $('.Group').css("height",windowCurrentHeight/1.4);
 
-        // --------------------------------------------
-        // TEMP
-        // --------------------------------------------
-
-        var $temp = $('.temp');
+        // Image size based on window dimensions
         var img = document.getElementById("groupImage");
-
-
         img.width = windowCurrentHeight/1.5;
         img.height = windowCurrentHeight/1.5;
         if (img.width>windowCurrentWidth){
@@ -152,20 +146,13 @@ function addaptiveResponse() {
             img.height = windowCurrentWidth/1.01; // 
         }
 
+        // Text in relation to image
+        var $groupText = $('.groupText');
+        $groupText.css("top", 0);
 
-        $('.Group').css("height",windowCurrentHeight/1.4);
-        
-
-        var $firstBlock = $('.groupText');
-        $firstBlock.css("top", 0);
-
-        var $h5 = $("h5");
-        $h5.css("margin-top", windowCurrentHeight/40);
-        $h5.css("margin-bottom", windowCurrentHeight/40);
-    
-        
+        // Horizontal line separator - make long enough
         $("#hid").css("width", windowCurrentWidth);
-        // TEMP
+        
     });
 
 
