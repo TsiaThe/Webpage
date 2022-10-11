@@ -72,7 +72,7 @@ function hideElements(){
 // It uses jQuery, too.
 // ==================================================================
 // Set both event handlers to same function.
-window.onload = window.onresize = addaptiveResponse;
+window.onload = window.onresize = window.ondeviceorientation = addaptiveResponse;
 function addaptiveResponse() {
 
     // General size variables
@@ -163,8 +163,6 @@ function addaptiveResponse() {
         $h5.css("margin-top", windowCurrentHeight/40);
         $h5.css("margin-bottom", windowCurrentHeight/40);
     
-        var $p = $("p");
-        $p.css("margin-top", 0);
         
         $("#hid").css("width", windowCurrentWidth);
         // TEMP
