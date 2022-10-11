@@ -141,46 +141,22 @@ function addaptiveResponse() {
         // TEMP
         // --------------------------------------------
 
-            /*
-        //$('.wrapperElement_L1C1').css("height", photoWidth/6);
-        //var img = document.getElementById("torusImage2");
-
-       // img.width = photoWidth/2.5;
-       // img.height = photoWidth/2.5;
-
-        
-        //$('#torusImage2').css("width", photoWidth/2.5);
-        //$('#torusImage2').css("height", photoWidth/2.5);
-        //$('#torusImage2').css("padding-top", img.height/4);
-        //$('#torusImage2').css("padding-bottom", img.height/4);
-        
-
-      //  $('.wrapperElement_L1C2').css("padding-top", img.height/4);
-      //  $('.wrapperElement_L1C2').css("padding-bottom", img.height/4);
-
-        var $imgT = $('#torusImage2');
-        var img = document.getElementById("torusImage2");
-
-        $imgT.css("width", photoWidth/2.5);
-        $imgT.css("height", photoWidth/2.5);
-        $('.wrapperElement_L1C2').css("padding-top", img.height/6);
-        */
-
-
-
-
-    
         var $temp = $('.temp');
-        var img = document.getElementById("backgroundImage");
-
-        var maxTest = Math.max(windowCurrentWidth, windowCurrentHeight);
-        img.width = maxTest/2;
-        img.height = maxTest/2;
-        //img.css("marigin-top", windowCurrentHeight);
-        // img.style.marginTop = windowCurrentHeight/4+"px";
+        var img = document.getElementById("groupImage");
 
 
-        var $firstBlock = $('.topLeftOfContainer');
+        img.width = windowCurrentHeight/1.5;
+        img.height = windowCurrentHeight/1.5;
+        if (img.width>windowCurrentWidth){
+            img.width = windowCurrentWidth/1.01;  // The +1% needed to hide the horizontal slide-bar
+            img.height = windowCurrentWidth/1.01; // 
+        }
+
+
+        $('.Group').css("height",windowCurrentHeight/1.4);
+        
+
+        var $firstBlock = $('.groupText');
         $firstBlock.css("top", 0);
 
         var $h5 = $("h5");
@@ -190,7 +166,7 @@ function addaptiveResponse() {
         var $p = $("p");
         $p.css("margin-top", 0);
         
-
+        $("#hid").css("width", windowCurrentWidth);
         // TEMP
     });
 

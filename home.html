@@ -12,15 +12,17 @@
 
 </head>
 
-
 <body>
-
+  <!-- ----------------------------- --> 
+  <!--  Common block for all pages!  --> 
+  <!-- ----------------------------- --> 
+  <!-- "navBarGrid" contains title, torus/vertical menu icon, horizontal menu and special icons -->
   <nav class="navBarGrid">
-
+    <!-- "wrapperTitle" contains title, torus/vertical menu icon and special icons -->
     <div class="wrapperTitle">
-            
+      <!-- "dropdownDIVSG": group of divs for vertical menu -->
       <div class="dropdownDIVSG"> 
-
+        <!-- "torusImageDIV": Div for the torus image when the window width is large -->
         <div id="torusImageDIV">
           <img id="torusImage" src="/static/images/TorusKnot.jpg"/> 
         </div>
@@ -32,17 +34,20 @@
         </button> 
       </div>
 
+      <!-- Name and profession adaptivity controlled by JS -->
       <div id="NameAndProfession">
         <h1 id="myName"> Theofanis Tsiantas</h1>
         <h1 id="myProfession"> Mechanical Engineer & Software Developer</h1>
       </div> 
 
+      <!-- LinkedIn & GitHub icons: adaptivity controlled by JS -->
       <div class="specialIconsGroup">
         <a href="https://www.linkedin.com/in/theofanis-tsiantas-390047141/"><img class="specialIcons" src="/static/images/LinkedIn.png"></a>
         <a href="https://github.com/TsiaThe"><img class="specialIcons" src="/static/images/GitHub.png"></a>
       </div>
     </div>
 
+    <!-- Horizontal menu -->
     <div class="navList">
       <a class="listElementG listElementH">Home</a>
       <a class="listElementG listElementH" href="/templates/skills.html">Skills</a>
@@ -50,79 +55,84 @@
       <a class="listElementG listElementH">Academia</a>
       <a class="listElementG listElementH">CV</a>
       <a class="listElementG listElementH">Contact</a>
-      <!--<a class="listElementG listElementH">Home</a>
-      <a class="listElementG listElementH" href="/templates/skills.html">Skills</a>
-      <a class="listElementG listElementH">Experience</a>
-      <a class="listElementG listElementH">Projects</a>
-      <a class="listElementG listElementH">Lectures</a>
-      <a class="listElementG listElementH">Papers</a>
-      <a class="listElementG listElementH">Education</a>
-      <a class="listElementG listElementH">Awards</a>
-      <a class="listElementG listElementH">CV</a>
-      <a class="listElementG listElementH">Contact</a>!-->
     </div>
   </nav>
 
+  <!-- Vertical menu (outside of nav!) -->
   <div>
     <div id="dropdownContent_id" class="dropdownContent">
       <a class="listElementG listElementV">Home</a>
       <a class="listElementG listElementV" href="/templates/skills.html">Skills</a>
-      <a class="listElementG listElementV">Experience</a>
       <a class="listElementG listElementV">Projects</a>
-      <a class="listElementG listElementV">Lectures</a>
-      <a class="listElementG listElementV">Papers</a>
-      <a class="listElementG listElementV">Education</a>
-      <a class="listElementG listElementV">Awards</a>
+      <a class="listElementG listElementV">Academia</a>
       <a class="listElementG listElementV">CV</a>
       <a class="listElementG listElementV">Contact</a>
     </div>
-
-    <!-- Old code with the Torus image (kept cause in later versions 
-         I might add a central picture per segment...)   
-    <div class="wrapperMainImage">
-    <img id="torusImgID" src="/static/images/TorusKnot.jpg"/>
-    </div> -->
   </div>
 
-  <!-- EXPERIMENTAL -->
+  <!-- Seperator -->
   <div class="h_line"></div>
 
-  <div class="temp">
-    <img id="backgroundImage" src="/static/images/TorusKnot.jpg"/> 
+  <!-- ------------------------------ --> 
+  <!--   Unique block for the page!   --> 
+  <!-- ------------------------------ --> 
 
-    <div class="topLeftOfContainer">
+  <div class="Group">
+    <img id="groupImage" src="/static/images/TorusKnot.jpg"/> 
+
+    <div class="groupText">
       <h5> A Personal Greeting</h5>
-      <p class="p">
-        Dear visitor, thank you for stepping by to take a look at my personal webpage. I am a technical person, very much interested in numerical methods and specialized in the finite element method for structural simulations. As academic and industrial experience piles up, I decided to set up a personal webpage that will allow me to introduce myself and illustrate my technical skills in a succinct way. I hope you will find this information useful and 
+      <p>
+        Dear visitor, thank you for stepping by to take a look at my personal webpage. 
+        I am a technical person, very much interested in numerical methods and specialized 
+        in the finite element method for structural simulations. As academic and industrial 
+        experience piles up, I decided to set up a personal webpage that will allow me to introduce 
+        myself and illustrate my technical skills in a succinct way. I hope you will find 
+        this information useful and 
       </p>
 
-      
       <h5> Brief Introduction</h5>
       <p>
-        I was born in Athens, Greece, in December 1992 where I spent my childhood, teenage and early adulthood. Inspired by my grandfather, a naval engineer with a great experience on engines, I decided quite early to study mechanical engineering. In 2010 I was accepted in the National Technical University of Athens (NTUA) for a five-year study program from which I acquired my diploma in 2015. During those years I discovered my passion for numerical simulation, and I had the opportunity to work on aerodynamic and aeroelastic codes for simulating wind turbines loads (here you may find the resulting publications).
+        I was born in Athens, Greece, in December 1992 where I spent my childhood, teenage and early adulthood. 
+        Inspired by my grandfather, a naval engineer with a great experience on engines, I decided quite early to 
+        study mechanical engineering. In 2010 I was accepted in the National Technical University of Athens (NTUA) 
+        for a five-year study program from which I acquired my diploma in 2015. During those years I discovered my 
+        passion for numerical simulation, and I had the opportunity to work on aerodynamic and aeroelastic codes 
+        for simulating wind turbines loads (here you may find the resulting publications).
         <br>
         <br>
-        I wanted to specialize in the Finite Element Method (FEM), so In 2016 I moved to Switzerland to attend a Masters program in the Swiss Federal Institute of Technology (ETHZ) with focus on FEM, structural optimization and numerical modeling of composite materials. I studied the crack initiation and propagation in composite plates by programming a specialized finite element software. In 2018 I was awarded ETH’s silver medal for my work.
+        I wanted to specialize in the Finite Element Method (FEM), so In 2016 I moved to Switzerland to attend a 
+        Masters program in the Swiss Federal Institute of Technology (ETHZ) with focus on FEM, structural optimization 
+        and numerical modeling of composite materials. I studied the crack initiation and propagation in composite plates 
+        by programming a specialized finite element software. In 2018 I was awarded ETH’s silver medal for my work.
         <br>
         <br>
-        Since my graduation in 2017 I have worked in several industrial sectors. My work always revolves around structural and thermal simulations. In the section Industry experience, I have provided detailed information on the projects and the responsibilities I handled in each position.         
+        Since my graduation in 2017 I have worked in several industrial sectors. My work always revolves around structural 
+        and thermal simulations. In the section Industry experience, I have provided detailed information on the projects 
+        and the responsibilities I handled in each position.         
       </p>
     </div>
 
   </div>
-
-  <div class="tempClass">
-    <h5> How to navigate in the Website</h5>
-    <p class="p">
-      Bla bla bla
-    </p>
-
-</div>
-
   
+  <!-- Seperator -->
 
 
+  <!-- ----------------------------- --> 
+  <!--  Common block for all pages!  --> 
+  <!-- ----------------------------- --> 
 
+
+  <div class="footer">
+    <div class="h_line" id="hid"></div>
+    <p>
+       Copywrite: Theofanis Tsiantas 
+      <br>
+       Last Update: 11.10.2022
+      <br>
+       Website Version: 1.0.0
+    </p>
+  </div>
 
 </body>
 

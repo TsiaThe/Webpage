@@ -197,37 +197,16 @@ body {
 }
 
 .listElementV {
+  position: relative;
+  z-index: 1;
+  text-align: center;
   border-width: 2px;
+  border-radius: 20px;
   font-size: 15px;
   width: 100px;
-  margin-top: 5%;
-}
-
-.wrapperMainImage {
-  align-items: center;
-}
-
-.temp {
-  position: relative;
-  text-align: center;
-  margin-top: 2%;
-}
-
-#backgroundImage {
-  opacity: 0.5;
-}
-
-.topLeftOfContainer {
-  position: absolute;
-  overflow: scroll;
-  height: 100%;
-  left: 5%;
-  right: 5%;
-}
-
-p {
-  color: grey;
-  opacity: 1;
+  margin-top: 15%;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .h_line {
@@ -236,26 +215,43 @@ p {
   background: grey;
 }
 
-.tempClass {
+.Group {
   position: relative;
   text-align: center;
   margin-top: 2%;
 }
 
-.wrapperElement {
-  display: flex;
-  padding: 0px 0px 0px 0px;
+#groupImage {
+  opacity: 0.5;
+}
+
+.groupText {
+  position: absolute;
+  overflow: scroll;
+  height: 100%;
+  left: 5%;
+  right: 5%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
   background-color: black;
-  display: flex;
+}
+
+.footer > * {
+  font-style: italic;
+}
+
+p {
+  color: grey;
+}
+
+.tempClass {
+  position: relative;
   text-align: center;
-}
-
-.wrapperElement_L1C1 {
-  padding: 0px 0px 0px 0px;
-}
-
-.wrapperElement_L1C2 {
-  padding: 0px 0px 0px 0px;
+  margin-top: 2%;
 }
 
 blockquote {

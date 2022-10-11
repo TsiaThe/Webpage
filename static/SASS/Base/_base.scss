@@ -212,7 +212,7 @@ padding-right: 0px;
 //             --------------------------
 // ===================================================
 
-// §st: The DIV for the horizontal navigation list
+// The DIV for the horizontal navigation list
 .navList{
     display: flex;
     list-style: outside none none;
@@ -222,7 +222,6 @@ padding-right: 0px;
     @media only screen and (max-width: $responsiveWidth){
         display: none;
         position: absolute;
-        //z-index: 1;
     }
 }
 
@@ -239,10 +238,11 @@ padding-right: 0px;
     font-size: 15px;
 }
 
-// ===================================================
-//              Vertical navigation list             
+// ***************************************************
+//              Vertical navigation list 
+//                (outside of navBar!)            
 //              -------------------------
-// ===================================================
+// ***************************************************
 
 // dropdownContent_id: of the dropdown menu
 // Currently only js
@@ -253,52 +253,61 @@ padding-right: 0px;
 .dropdownContent {
     display: none;
     position: absolute;
-    // z-index: 1;xw
   }
   
 // The elements of the vertical list
 .listElementV{
 
     //js
+    position: relative;
+    z-index: 1;
+    text-align: center;
     border-width: 2px ;
+    border-radius: 20px;
     font-size: 15px;
     width: 100px;
-    margin-top: 5%;
+    margin-top: 15%;
+    padding-top: 15%;
+    padding-bottom: 15%;
 }
 
-// ===================================================
-//                      Main image             
-//                      ----------
-// ===================================================
+// ***************************************************
+//                    SEPERATORS       
+//                    -----------
+// Seperators might be used to seperate entities in the
+// page.
+// ***************************************************
 
-.wrapperMainImage{
-    align-items: center;
-
+.h_line{
+    width:100%; 
+    height:1px; 
+    background: grey; 
 }
 
-// ===================================================
-// TEMP AND TESTING
+// ***************************************************
+//                       GROUPING         
+//                       -------- 
+// Each page consists of a number of groups after the 
+// common nav-block. Each block has a background image 
+// and a text section which is shown in front of the 
+// image. The text section is made primarily of h5 and 
+// p elements.
+// ***************************************************
 
-
-.temp{
-    //margin-left: auto;
-    //margin-right: auto;
-
+// The group as a total (imamge+text)
+.Group{
     position: relative;
     text-align: center;
     margin-top: 2%;
-    //border: 1px solid grey;
-    //border-radius: 20px;
 }
 
-#backgroundImage{
-   // margin-left: auto;
-   // margin-right: auto;
-   //margin-top: 10%;
+// The background image
+#groupImage{
     opacity: 0.5;
 }
 
-.topLeftOfContainer{
+// The group text
+.groupText{
     position: absolute;
     overflow: scroll;
     height: 100%;
@@ -306,45 +315,41 @@ padding-right: 0px;
     right: 5%;
 }
 
+
+// ***************************************************
+//                        FOOTER         
+//                       -------- 
+// Each page has a common footer with a single style
+// ***************************************************
+.footer{
+position: fixed;
+bottom:0;
+z-index: 2;
+background-color: black;
+}
+
+.footer>*{
+   font-style: italic;
+}
+
+
+
+
+
+// TEMP
+
+
 p{
     color:grey;
-    opacity: 1;
 }
-
-.h_line{
-    width:100%; height:1px; background: grey; 
-}
-
 
 .tempClass{
     //margin-left: auto;
     //margin-right: auto;
 
-    position: relative;
+    position: relative; 
     text-align: center;
     margin-top: 2%;
     //border: 1px solid grey;
     //border-radius: 20px;
 }
-
-
-
-
-
-
-// Kept only for naming inspiration
-.wrapperElement{
-    display: flex;
-    padding: 0px 0px 0px 0px;
-    background-color: black;
-    display: flex;
-    text-align: center;
-}
-
-.wrapperElement_L1C1{
-    padding: 0px 0px 0px 0px;
-}
-
-.wrapperElement_L1C2{
-    padding: 0px 0px 0px 0px;
-}    
