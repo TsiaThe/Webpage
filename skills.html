@@ -7,20 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
   <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="/static/js/jsFunctions.js" ></script>
+  <script type="text/javascript" src="/static/js/jsMenu.js" ></script>
+  <script type="text/javascript" src="/static/js/jsAdaptivity.js" ></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
-
 <body>
-  
+  <!-- ----------------------------- --> 
+  <!--  Common block for all pages!  --> 
+  <!-- ----------------------------- --> 
+  <!-- "navBarGrid" contains title, torus/vertical menu icon, horizontal menu and special icons -->
   <nav class="navBarGrid">
-
+    <!-- "wrapperTitle" contains title, torus/vertical menu icon and special icons -->
     <div class="wrapperTitle">
-            
+      <!-- "dropdownDIVSG": group of divs for vertical menu -->
       <div class="dropdownDIVSG"> 
-
+        <!-- "torusImageDIV": Div for the torus image when the window width is large -->
         <div id="torusImageDIV">
           <img id="torusImage" src="/static/images/TorusKnot.jpg"/> 
         </div>
@@ -32,52 +35,109 @@
         </button> 
       </div>
 
-      <div>
+      <!-- Name and profession adaptivity controlled by JS -->
+      <div id="NameAndProfession">
         <h1 id="myName"> Theofanis Tsiantas</h1>
-      </div>  
+        <h1 id="myProfession"> Mechanical Engineer & Programmer</h1>
+      </div> 
 
+      <!-- LinkedIn & GitHub icons: adaptivity controlled by JS -->
       <div class="specialIconsGroup">
         <a href="https://www.linkedin.com/in/theofanis-tsiantas-390047141/"><img class="specialIcons" src="/static/images/LinkedIn.png"></a>
         <a href="https://github.com/TsiaThe"><img class="specialIcons" src="/static/images/GitHub.png"></a>
       </div>
     </div>
 
+    <!-- Horizontal menu -->
     <div class="navList">
-      <a class="listElementG listElementH" href="/templates/home.html">Home</a>
-      <a class="listElementG listElementH">Skills</a>
-      <a class="listElementG listElementH">Experience</a>
+      <a class="listElementG listElementH"href="/home.html">Home</a>
+      <a class="listElementG listElementH" href="/skills.html">Skills</a>
       <a class="listElementG listElementH">Projects</a>
-      <a class="listElementG listElementH">Lectures</a>
-      <a class="listElementG listElementH">Papers</a>
-      <a class="listElementG listElementH">Education</a>
-      <a class="listElementG listElementH">Awards</a>
+      <a class="listElementG listElementH">Academia</a>
       <a class="listElementG listElementH">CV</a>
       <a class="listElementG listElementH">Contact</a>
     </div>
   </nav>
 
+  <!-- Vertical menu (outside of nav!) -->
   <div>
     <div id="dropdownContent_id" class="dropdownContent">
-      <a class="listElementG listElementV" href="/templates/home.html">Home</a>
-      <a class="listElementG listElementV">Skills</a>
-      <a class="listElementG listElementV">Experience</a>
+      <a class="listElementG listElementV" href="/home.html">Home</a>
+      <a class="listElementG listElementV" href="/skills.html">Skills</a>
       <a class="listElementG listElementV">Projects</a>
-      <a class="listElementG listElementV">Lectures</a>
-      <a class="listElementG listElementV">Papers</a>
-      <a class="listElementG listElementV">Education</a>
-      <a class="listElementG listElementV">Awards</a>
+      <a class="listElementG listElementV">Academia</a>
       <a class="listElementG listElementV">CV</a>
       <a class="listElementG listElementV">Contact</a>
     </div>
-
-    <div class="wrapperMainImage">
-      <img id="torusImgID" src="/static/images/TorusKnot.jpg"/> 
-    </div>
   </div>
-  
-   
 
-  <h5>Under development</h5>
+  <!-- Seperator -->
+  <div class="h_line"></div>
+
+  <!-- ------------------------------ --> 
+  <!--   Unique block for the page!   --> 
+  <!-- ------------------------------ --> 
+
+  <!--  <h4> Programming</h4> src="/static/images/test.jpg"  --> 
+  <div class="Group">
+     <img class="groupImage" />
+
+    <div class="groupText">
+      <h5> Programming Languages </h5>
+      <p>
+        C++.
+      </p>
+
+      <p>
+        C#.
+      </p>
+
+      <p>
+        Java.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="Group">
+    <img class="groupImage" src="/static/images/testS2.png" />
+
+    <div class="groupText">
+      <h5> Simulation</h5>
+      <p>
+        ANSYS
+      </p>
+      <p>
+        Simcenter NASTRAN
+      </p>
+      <p>
+        MADYN 2000
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="Group">
+    <img class="groupImage" src="/static/images/testS2.png" />
+
+    <div class="groupText">
+      <h5> Simulation</h5>
+
+      <ul>
+        <p>Static Structural</p>
+        <p>Dynamic Structural (transient, modal, harmonic response)</p>
+        <p>Lateral/Torsional Rotordynamics (transient, modal, harmonic response)</p>
+        <p>Thermal (static, transient)</p>
+        <p>Software experience: ANSYS, Simcenter NASTRAN, MADYN 2000</p>
+      </ul>
+    
+    </div>
+
+  </div>
 
 
 
@@ -85,5 +145,22 @@
 
 </body>
 
+  <!-- ----------------------------- --> 
+  <!--   Footer (common for pages!)  --> 
+  <!-- ----------------------------- --> 
+  
+<footer class="footer">
+  <div class="h_line" id="hid"></div>
+
+    <p class="footerParagraph">
+       Copywrite: Theofanis Tsiantas 
+    </p>
+    <p class="footerParagraph">
+       Last Update: 11.10.2022
+    </p>
+    <p class="footerParagraph">
+       Website Version: 1.0.0
+    </p>
+</footer>
 
 </html>

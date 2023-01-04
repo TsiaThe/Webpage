@@ -6,92 +6,174 @@
 @import "./base.mixins";
 @import "./base.graphics";
 
+// ******************************************************************************************************
+//                                                 GENERAL                       
+//                                                 -------
+// ******************************************************************************************************
+
+// Set generic html properties
 html{
     background-size: cover;
     background-color: black;//$color3;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 // Set default header font weights
 h1, h2, h3, h4, h5, h6{
     font-weight: $font-weight-headers;   
     margin: 5% auto;
-    color: gray;  
+    color: white; //gray;  
 }
 
-// Set header sizes
-h1{font-size: $header-size-1;}
-h2{font-size: $header-size-2;}
-h3{font-size: $header-size-3;}
-h4{font-size: $header-size-4;}
-h5{font-size: $header-size-5;}
-h6{font-size: $header-size-6;}
+// Set header sizes -> based on variables at base.settings
+h1{font-size: $base-font-size;}
+h2{font-size: $der-1-font-size;}
+h3{font-size: $der-2-font-size;}
 
-// ***************************************************
-//                         BODY                       
-//                         ----
-// ***************************************************
+// ******************************************************************************************************
+//                                                   BODY                        
+//                                                   ----
+// ******************************************************************************************************
 
 body{
-
+    // Set a small responsive margin
+    margin: auto;
+    padding: auto;
+    
     // Set line heights
     line-height: $base-line-height;
 
     // Set default font weights
     font-weight: $font-weight-regular;
 
-    // Set a small responsive margin
-    margin-left: 1% ;
-    margin-right: 1% ;
-    margin-top: 1% ;
-    margin-bottom: 1% ;
+    background-color: lightblue; //TBD
+    overflow-x: hidden;  
 }
 
-// ***************************************************
-//                    NAVIGATION BAR             
-//                    --------------
-// Contains:
-// Title group (verical nav. list, name, special icons
-// Horrizontal navigation list
-// ***************************************************
+// ******************************************************************************************************
+//                                                NAVIGATION             
+//                                                ----------
+// ******************************************************************************************************
 
-// navBarGrid: contains:
-// - The wrapperTitle
-// - the menu in horizotal arrangement
+// Encapsulation: For background
+.navBarCapsule{
+    border: dotted orange 1px;
+}
+
+// navBarGrid contains the wrapperTitle (name & profession, special icons, vertical menu icon) 
+// & the menu in horizotal arrangement
 .navBarGrid{
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    border: solid green 1px;
+    position: relative;
+    margin: 0px auto;
+
+    @media only screen and (min-width: $responsiveWidth){
+        width: $responsiveWidth;
+    }
 }
-// ----------------------------------------
 
-// ===================================================
-//                     Title group
-//                     -----------
-// ===================================================
-
-// wrapperTitle: contains:
-// - dropdown menu
-// - name and profession
-// - special icons (Giuthub, LinkedIn)
+// wrapperTitle: contains name & profession, special icons, vertical menu icon
 .wrapperTitle{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: black;
+    list-style: outside none none;
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: brown;  // For DEV
+    border: solid yellow 1px; // For DEV
+    position: relative;
 }
-// ----------------------------------------
+
+// --------------- Setup of name and profession ---------------
+#NameAndProfession{
+    text-align: left;
+    position: relative;
+ }
+
+// myName: id with my Name
+ #myName{
+    font-size: $base-font-size;
+    position: relative;
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 0em;
+    padding-right: 0em;
+
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+
+    background-color: blue;
+    color: black;
+}
+
+// myProfession: id with my Profession(s)
+ #myProfession{
+    font-size: $der-1-font-size;
+    position: relative;
+
+    position: relative;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 0em;
+    padding-right: 0em;
+
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    background-color: greenyellow;
+    color: black;
+ }
+// ------------------------------------------------------------
+
+
+// ---------------- Setup of GitHub & LinkedIn ----------------
+.specialIconsGroup{
+    margin-left: auto; // Centers my name in the page (together with the "margin-right" of the dropdown).
+    border: solid white 1px;
+    display:block;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: $base-font-size+$der-1-font-size;
+    display: block;
+
+    @media only screen and (max-width: $responsiveWidth){
+        display: none;
+        position: absolute;
+    }
+}
+
+// The actual icons: size calculation for width > responsive width
+.specialIcons{
+    display: block;
+    //padding: auto;
+    // 1. h= total height of specialIconsGroup-div
+    // 2. L= height of each special icon
+    // 3. b= height of padding on top & bottom of each special icon
+    // Sizings are based on the formula: h = 2*L+4*b, L<=h/2, factor 2.4 chosen arbitrarily
+    height: ($base-font-size+$der-1-font-size)/2.4;
+    padding-top: ($base-font-size+$der-1-font-size)/24;
+    padding-bottom: ($base-font-size+$der-1-font-size)/24;
+}
+ // ------------------------------------------------------------
 
 // dropdownDIVSG: Group with the button and the menu divs
 .dropdownDIVSG{
-    margin-right: auto;
-}
-// ----------------------------------------
+    //margin-left: auto;
+    //border: solid white 1px;
 
+    @media only screen and (max-width: $responsiveWidth){
+        display: flex;
+        position: relative;
+        margin-left: auto; // Centers my name in the page (together with the "margin-right" of the dropdown).
+
+    }
+}
+
+/* TO BE DELETED
 // For width>responsive width, a div with the torus image appears
 #torusImageDIV{
     display: flex;
@@ -111,80 +193,45 @@ body{
     margin-left: 0px;
     margin-right: 0px;
 }
+TO BE DELETED*/
 
-// The button with the divs which represent the menu
+// ----- The button with the divs which represent the menu -----
 #myBtn{
-background-color: black;
-border-color: black;
-border-style: solid;
-display: block;
-margin-top: 0px;
-margin-bottom: 0px;
-margin-left: 0px;
-margin-right: 0px;
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 
-padding-top: 0px;
-padding-bottom: 0px;
-padding-left: 0px;
-padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 
-
-@media only screen and (min-width: $responsiveWidth){
-    display: none;
+    @media only screen and (min-width: $responsiveWidth){
+        display: none;
+    }
 }
-
-}
-// ----------------------------------------
 
 // menuDIV1-3: Menu Divs ids
 // Currently only js code
 // #menuDIV1{}
 // #menuDIV2{}
 // #menuDIV3{}
-// Grabbing all menuDivs at once
+
+// All divs of the button only
 #myBtn div{
     border-color: grey;
     border-style: solid;
 }
-// ----------------------------------------
+// -------------------------------------------------------------
 
-// NameAndProfession: id with the div which contains 
-// my Name and my Profession. Centers the h-elements
- #NameAndProfession{
-    text-align: center;
- }
-// ----------------------------------------
 
-// myName: id with my Name
-// Currently only js
-// #myName{}
-// ----------------------------------------
-
-// myProfession: id with my Profession(s)
-// Currently only js
-// #myProfession{}
-// ----------------------------------------
-
-// specialIconsGroup: Group with special icons (LinkedIn, GitHub)
-.specialIconsGroup{
-    margin-left: auto; // Centers my name in the page (together with the "margin-right" of the dropdown).
-}
-// ----------------------------------------
-
-// specialIcons: LinkedIn, GitHub
-.specialIcons{
-    display: block;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-// ----------------------------------------
-
-// ===================================================
-//             Navigation generals (H & V)           
-//             --------------------------
-// ===================================================
-
-// The elements of the all navigation lists (horizontal and vertical)
+// --------------- Setup of links to other pages ---------------
+// The elements of the all navigation lists (horiz. and vert.)
 .listElementG{    
     text-align: center;
     border-color: blue;
@@ -207,17 +254,14 @@ padding-right: 0px;
     color: white;
 } 
 
-// ===================================================
-//             Horizontal navigation list             
-//             --------------------------
-// ===================================================
-
-// The DIV for the horizontal navigation list
+// Horizontal navigation list only
 .navList{
     display: flex;
     list-style: outside none none;
-    margin-left: 10%;
-    margin-right: 10%;
+    //margin-left: 8%;
+    //margin-right: 8%;
+    border: solid brown 2px;
+
 
     @media only screen and (max-width: $responsiveWidth){
         display: none;
@@ -225,10 +269,11 @@ padding-right: 0px;
     }
 }
 
-// The elements of the horizontal list
+// Elements of the horizontal list only
 .listElementH{   
     width: 10%;
-    margin-top: 2%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
     margin-left: auto;
     margin-right: auto;
 
@@ -238,24 +283,14 @@ padding-right: 0px;
     font-size: 15px;
 }
 
-// ***************************************************
-//              Vertical navigation list 
-//                (outside of navBar!)            
-//              -------------------------
-// ***************************************************
 
-// dropdownContent_id: of the dropdown menu
-// Currently only js
-// #dropdownContent_id{}
-// ----------------------------------------
-
-// The display options for the dropdown menu
+// Vertical navigation list only: The display options for the dropdown menu
 .dropdownContent {
     display: none;
     position: absolute;
   }
   
-// The elements of the vertical list
+// Elements of the vertical list only
 .listElementV{
 
     //js
@@ -266,69 +301,70 @@ padding-right: 0px;
     border-radius: 20px;
     font-size: 15px;
     width: 100px;
-    margin-top: 15%;
-    padding-top: 15%;
-    padding-bottom: 15%;
 }
+// -------------------------------------------------------------
 
-// ***************************************************
-//                    SEPERATORS       
-//                    -----------
-// Seperators might be used to seperate entities in the
-// page.
-// ***************************************************
 
-.h_line{
-    width:100%; 
-    height:1px; 
-    background: grey; 
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-}
+// ******************************************************************************************************
+//                                                  GROUPS             
+//                                                  ------
+// ******************************************************************************************************
 
-// ***************************************************
-//                       GROUPING         
-//                       -------- 
-// Each page consists of a number of groups after the 
-// common nav-block. Each block has a background image 
-// and a text section which is shown in front of the 
-// image. The text section is made primarily of h5 and 
-// p elements.
-// ***************************************************
+// --------------- General for all groups and their texts ---------------
 
-// The group as a total (imamge+text)
 .Group{
     position: relative;
     text-align: center;
-    margin-top: 2%;
+    border: solid white 1px;
+    margin: 0px auto;
+    padding: 0px auto;
+
+    @media only screen and (min-width: $responsiveWidth){
+        width: $responsiveWidth;
+    }
 }
 
-// The background image
+// The background image : TBD ??
 #groupImage{
     opacity: 0.5;
 }
 
-// The group text
 .groupText{
-    position: absolute;
-    overflow: scroll;
-    height: 100%;
-    left: 5%;
-    right: 5%;
+    //position: absolute;
+    //overflow: scroll;
+    //height: 100%;
+    //left: 5%;
+    //right: 5%;
 }
 
+// ----------------------------------------------------------------------
 
-// ***************************************************
-//                        FOOTER         
-//                       -------- 
-// Each page has a common footer with a single style
-// ***************************************************
+// Group 1 ("To  be filled"): Encapsulation for background
+#GroupCapsuleHome1{
+    background-color: lightcoral;
+    border: dotted orange 1px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+ 
+// Group 2 ("To  be filled"): Encapsulation for background
+#GroupCapsuleHome2{
+    background-color: lightcyan;
+    border: dotted orange 1px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+// ******************************************************************************************************
+//                                                  FOOTER         
+//                                                  ------
+// ******************************************************************************************************
+
 .footer{
-position: fixed;
-bottom:0;
-z-index: 2;
-background-color: black;
-text-align: center;
+    bottom:0;
+    z-index: 2; // To ensure that it is in front of everything (not strictly necessary)
+    background-color: lightgrey;
+    text-align: center;
 }
 
 .footerParagraph{
@@ -343,12 +379,4 @@ text-align: center;
    margin-left: 0px;
    margin-right: 0px;
    line-height: normal;
-}
-
-
-// TEMP
-
-
-p{
-    color:grey;
 }

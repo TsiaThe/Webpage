@@ -8,7 +8,14 @@
 @use "sass:math";
 
 $base-spacing-unit: 24px;
-$base-font-size: 16px;
+
+$golden-ratio: 1.61803398875;
+
+$base-font-size: 40px;
+$der-1-font-size: math.div($base-font-size,$golden-ratio);
+$der-2-font-size: math.div($der-1-font-size,$golden-ratio);
+  
+
 $base-line-height: $base-spacing-unit;
 
 // Spacing sizes
@@ -34,14 +41,6 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-headers: $font-weight-bold;
-
-// Header sizes
-$header-size-1: $base-font-size*4;
-$header-size-2: $base-font-size*3.6;
-$header-size-3: $base-font-size*3.3;
-$header-size-4: $base-font-size*3.0;
-$header-size-5: $base-font-size*2.2;
-$header-size-6: $base-font-size*1.5;
 
 // Responsiveness parameters
 $responsiveWidth: 1000px;

@@ -14,52 +14,53 @@
 </head>
 
 <body>
-  <!-- ----------------------------- --> 
-  <!--  Common block for all pages!  --> 
-  <!-- ----------------------------- --> 
-  <!-- "navBarGrid" contains title, torus/vertical menu icon, horizontal menu and special icons -->
-  <nav class="navBarGrid">
-    <!-- "wrapperTitle" contains title, torus/vertical menu icon and special icons -->
-    <div class="wrapperTitle">
-      <!-- "dropdownDIVSG": group of divs for vertical menu -->
-      <div class="dropdownDIVSG"> 
-        <!-- "torusImageDIV": Div for the torus image when the window width is large -->
-        <div id="torusImageDIV">
-          <img id="torusImage" src="/static/images/TorusKnot.jpg"/> 
+
+  <!-- ----------------------------------------------------------------------------------------- --> 
+  <!-- ------------------------------ Common block for all pages! ------------------------------ --> 
+  <!-- ----------------------------------------------------------------------------------------- --> 
+  
+  <!-- "navBarCapsule" is the capsule of the navigation bar and all its containers -->
+  <div class="navBarCapsule">
+    <!-- "navBarGrid" contains title, vertical menu icon, horizontal menu and special icons -->
+    <nav class="navBarGrid">
+      <!-- "wrapperTitle" contains title, vertical menu icon and special icons -->
+      <div class="wrapperTitle">
+
+        <!-- Name and profession -->
+        <div id="NameAndProfession">
+          <h1 id="myName"> Theofanis Tsiantas</h1>
+          <h1 id="myProfession"> Mechanical Engineer & Software Developer</h1>
+        </div> 
+
+        <!-- LinkedIn & GitHub icons -->
+        <div class="specialIconsGroup">
+          <a href="https://www.linkedin.com/in/theofanis-tsiantas-390047141/"><img class="specialIcons" src="/static/images/LinkedIn.png"></a>
+          <a href="https://github.com/TsiaThe"><img class="specialIcons" src="/static/images/GitHub.png"></a>
         </div>
 
-        <button onclick="verticalMenuShow()" id="myBtn">
-          <div id="menuDIV1" class="dropdownDIVS"></div>
-          <div id="menuDIV2" class="dropdownDIVS"></div>
-          <div id="menuDIV3" class="dropdownDIVS"></div>
-        </button> 
+        <!-- "dropdownDIVSG": group of divs for vertical menu -->
+        <div class="dropdownDIVSG"> 
+          <button onclick="verticalMenuShow()" id="myBtn">
+            <div id="menuDIV1" class="dropdownDIVS"></div>
+            <div id="menuDIV2" class="dropdownDIVS"></div>
+            <div id="menuDIV3" class="dropdownDIVS"></div>
+          </button> 
+        </div>
       </div>
 
-      <!-- Name and profession adaptivity controlled by JS -->
-      <div id="NameAndProfession">
-        <h1 id="myName"> Theofanis Tsiantas</h1>
-        <h1 id="myProfession"> Mechanical Engineer & Software Developer</h1>
-      </div> 
-
-      <!-- LinkedIn & GitHub icons: adaptivity controlled by JS -->
-      <div class="specialIconsGroup">
-        <a href="https://www.linkedin.com/in/theofanis-tsiantas-390047141/"><img class="specialIcons" src="/static/images/LinkedIn.png"></a>
-        <a href="https://github.com/TsiaThe"><img class="specialIcons" src="/static/images/GitHub.png"></a>
+      <!-- Horizontal menu -->
+      <div class="navList">
+        <a class="listElementG listElementH">Home</a>
+        <a class="listElementG listElementH" href="/templates/skills.html">Skills</a>
+        <a class="listElementG listElementH">Projects</a>
+        <a class="listElementG listElementH">Academia</a>
+        <a class="listElementG listElementH">CV</a>
+        <a class="listElementG listElementH">Contact</a>
       </div>
-    </div>
-
-    <!-- Horizontal menu -->
-    <div class="navList">
-      <a class="listElementG listElementH">Home</a>
-      <a class="listElementG listElementH" href="/templates/skills.html">Skills</a>
-      <a class="listElementG listElementH">Projects</a>
-      <a class="listElementG listElementH">Academia</a>
-      <a class="listElementG listElementH">CV</a>
-      <a class="listElementG listElementH">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Vertical menu (outside of nav!) -->
+    </nav>
+  </div>
+  
+  <!-- Vertical menu (outside of nav!) 
   <div>
     <div id="dropdownContent_id" class="dropdownContent">
       <a class="listElementG listElementV">Home</a>
@@ -70,30 +71,36 @@
       <a class="listElementG listElementV">Contact</a>
     </div>
   </div>
+-->
 
-  <!-- Seperator -->
-  <div class="h_line"></div>
+  <!-- ----------------------------------------------------------------------------------------- --> 
+  <!-- ------------------------------ Unique block for the page! ------------------------------- 
+   - "GroupCapsule" sets the generic properties of the capsule. The ID is used for the background only
+   - "Group" is used as a generic container for properties of the groups    
+   - "groupText" is reserved to set properties at the text of the groups
+       ----------------------------------------------------------------------------------------- --> 
 
-  <!-- ------------------------------ --> 
-  <!--   Unique block for the page!   --> 
-  <!-- ------------------------------ --> 
-
-  <div class="Group">
-    <img id="groupImage" src="/static/images/TorusKnot.jpg"/> 
-
-    <div class="groupText">
-      <h5> A Personal Greeting</h5>
-      <p>
+  <div id="GroupCapsuleHome1">  
+    <div class="Group">
+      <div class="groupText">
+        <h5> A Personal Greeting</h5>
+        <p>
         Dear visitor, thank you for stepping by to take a look at my personal webpage. 
         I am a technical person, very much interested in numerical methods and specialized 
         in the finite element method for structural simulations. As academic and industrial 
         experience piles up, I decided to set up a personal webpage that will allow me to introduce 
         myself and illustrate my technical skills in a succinct way. I hope you will find 
         this information useful and 
-      </p>
+        </p>
+      </div>
+    </div>
+  </div>
 
-      <h5> Brief Introduction</h5>
-      <p>
+  <div id="GroupCapsuleHome2">
+    <div class="Group">
+      <div class="groupText">
+        <h5> Brief Introduction</h5>
+        <p>
         I was born in Athens, Greece, in December 1992 where I spent my childhood, teenage and early adulthood. 
         Inspired by my grandfather, a naval engineer with a great experience on engines, I decided quite early to 
         study mechanical engineering. In 2010 I was accepted in the National Technical University of Athens (NTUA) 
@@ -111,16 +118,16 @@
         Since my graduation in 2017 I have worked in several industrial sectors. My work always revolves around structural 
         and thermal simulations. In the section Industry experience, I have provided detailed information on the projects 
         and the responsibilities I handled in each position.         
-      </p>
+        </p>
+      </div>
     </div>
-
   </div>
 
 </body>
 
   <!-- ----------------------------- --> 
   <!--   Footer (common for pages!)  --> 
-  <!-- ----------------------------- --> 
+  <!-- -----------------------------  -->
   
 <footer class="footer">
   <div class="h_line" id="hid"></div>

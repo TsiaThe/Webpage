@@ -26,89 +26,148 @@ a:hover {
 html {
   background-size: cover;
   background-color: black;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 5% auto;
-  color: gray;
+  color: white;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 57.6px;
+  font-size: 24.72135955px;
 }
 
 h3 {
-  font-size: 52.8px;
-}
-
-h4 {
-  font-size: 48px;
-}
-
-h5 {
-  font-size: 35.2px;
-}
-
-h6 {
-  font-size: 24px;
+  font-size: 15.27864045px;
 }
 
 body {
+  margin: auto;
+  padding: auto;
   line-height: 24px;
   font-weight: 400;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  background-color: lightblue;
+  overflow-x: hidden;
+}
+
+.navBarCapsule {
+  border: dotted orange 1px;
 }
 
 .navBarGrid {
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  border: solid green 1px;
+  position: relative;
+  margin: 0px auto;
+}
+@media only screen and (min-width: 1000px) {
+  .navBarGrid {
+    width: 1000px;
+  }
 }
 
 .wrapperTitle {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 1%;
-  padding-right: 1%;
-  background-color: black;
+  list-style: outside none none;
+  margin-top: 0px;
+  padding-top: 0px;
+  background-color: brown;
+  border: solid yellow 1px;
+  position: relative;
 }
 
-.dropdownDIVSG {
-  margin-right: auto;
+#NameAndProfession {
+  text-align: left;
+  position: relative;
 }
 
-#torusImageDIV {
-  display: flex;
-  margin-right: auto;
+#myName {
+  font-size: 40px;
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 0em;
+  padding-right: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  margin-right: 0em;
+  background-color: blue;
+  color: black;
+}
+
+#myProfession {
+  font-size: 24.72135955px;
+  position: relative;
+  position: relative;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-left: 0em;
+  padding-right: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  margin-right: 0em;
+  background-color: greenyellow;
+  color: black;
+}
+
+.specialIconsGroup {
+  margin-left: auto;
+  border: solid white 1px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 64.72135955px;
+  display: block;
 }
 @media only screen and (max-width: 1000px) {
-  #torusImageDIV {
+  .specialIconsGroup {
     display: none;
+    position: absolute;
   }
 }
 
-#torusImage {
-  position: relative;
-  border-style: solid;
+.specialIcons {
   display: block;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  height: 26.9672331458px;
+  padding-top: 2.6967233146px;
+  padding-bottom: 2.6967233146px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .dropdownDIVSG {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+  }
+}
+
+/* TO BE DELETED
+// For width>responsive width, a div with the torus image appears
+#torusImageDIV{
+    display: flex;
+    margin-right: auto;
+    @media only screen and (max-width: $responsiveWidth){
+        display: none;
+    }
+}
+
+// The temporary torus image
+#torusImage{
+    position: relative;
+    border-style: solid;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+TO BE DELETED*/
 #myBtn {
   background-color: black;
   border-color: black;
@@ -134,20 +193,6 @@ body {
   border-style: solid;
 }
 
-#NameAndProfession {
-  text-align: center;
-}
-
-.specialIconsGroup {
-  margin-left: auto;
-}
-
-.specialIcons {
-  display: block;
-  padding-top: 20%;
-  padding-bottom: 20%;
-}
-
 .listElementG {
   text-align: center;
   border-color: blue;
@@ -171,8 +216,7 @@ body {
 .navList {
   display: flex;
   list-style: outside none none;
-  margin-left: 10%;
-  margin-right: 10%;
+  border: solid brown 2px;
 }
 @media only screen and (max-width: 1000px) {
   .navList {
@@ -183,7 +227,8 @@ body {
 
 .listElementH {
   width: 10%;
-  margin-top: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   margin-left: auto;
   margin-right: auto;
   border-width: 2px;
@@ -204,42 +249,43 @@ body {
   border-radius: 20px;
   font-size: 15px;
   width: 100px;
-  margin-top: 15%;
-  padding-top: 15%;
-  padding-bottom: 15%;
-}
-
-.h_line {
-  width: 100%;
-  height: 1px;
-  background: grey;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
 }
 
 .Group {
   position: relative;
   text-align: center;
-  margin-top: 2%;
+  border: solid white 1px;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+@media only screen and (min-width: 1000px) {
+  .Group {
+    width: 1000px;
+  }
 }
 
 #groupImage {
   opacity: 0.5;
 }
 
-.groupText {
-  position: absolute;
-  overflow: scroll;
-  height: 100%;
-  left: 5%;
-  right: 5%;
+#GroupCapsuleHome1 {
+  background-color: lightcoral;
+  border: dotted orange 1px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#GroupCapsuleHome2 {
+  background-color: lightcyan;
+  border: dotted orange 1px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   z-index: 2;
-  background-color: black;
+  background-color: lightgrey;
   text-align: center;
 }
 
@@ -255,10 +301,6 @@ body {
   margin-left: 0px;
   margin-right: 0px;
   line-height: normal;
-}
-
-p {
-  color: grey;
 }
 
 blockquote {
