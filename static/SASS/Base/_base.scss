@@ -14,14 +14,12 @@
 // Set generic html properties
 html{
     background-size: cover;
-    background-color: black;//$color3;
 }
 
 // Set default header font weights
 h1, h2, h3, h4, h5, h6{
     font-weight: $font-weight-headers;   
-    margin: 5% auto;
-    color: white; //gray;  
+    color: black; //gray;  
 }
 
 // Set header sizes -> based on variables at base.settings
@@ -38,14 +36,14 @@ body{
     // Set a small responsive margin
     margin: auto;
     padding: auto;
-    
+
     // Set line heights
     line-height: $base-line-height;
 
     // Set default font weights
     font-weight: $font-weight-regular;
 
-    background-color: lightblue; //TBD
+    background-color: lightgreen; //TBD
     overflow-x: hidden;  
 }
 
@@ -56,15 +54,21 @@ body{
 
 // Encapsulation: For background
 .navBarCapsule{
+
+    background-image: url("/static/images/Backgrounds/BG_1.jpeg");
+    //background-size: contain; 
     border: dotted orange 1px;
 }
 
 // navBarGrid contains the wrapperTitle (name & profession, special icons, vertical menu icon) 
 // & the menu in horizotal arrangement
 .navBarGrid{
-    border: solid green 1px;
+
+    border: solid black 1px;
+    border-radius: 5px;
     position: relative;
     margin: 0px auto;
+    padding: 0.15%;
 
     @media only screen and (min-width: $responsiveWidth){
         width: $responsiveWidth;
@@ -77,9 +81,14 @@ body{
     list-style: outside none none;
     margin-top: 0px;
     padding-top: 0px;
-    background-color: brown;  // For DEV
-    border: solid yellow 1px; // For DEV
+    // background-color: brown;  // For DEV
+    // border: solid yellow 1px; // For DEV
     position: relative;
+    padding: 0.25%;
+
+    @media only screen and (min-width: $responsiveWidth){
+        border-bottom: solid black 1px; // For DEV
+    }
 }
 
 // --------------- Setup of name and profession ---------------
@@ -103,7 +112,7 @@ body{
     margin-left: 0em;
     margin-right: 0em;
 
-    background-color: blue;
+    // background-color: blue;
     color: black;
 }
 
@@ -122,7 +131,7 @@ body{
     margin-bottom: 0em;
     margin-left: 0em;
     margin-right: 0em;
-    background-color: greenyellow;
+    // background-color: greenyellow;
     color: black;
  }
 // ------------------------------------------------------------
@@ -131,7 +140,7 @@ body{
 // ---------------- Setup of GitHub & LinkedIn ----------------
 .specialIconsGroup{
     margin-left: auto; // Centers my name in the page (together with the "margin-right" of the dropdown).
-    border: solid white 1px;
+    // border: solid white 1px;
     display:block;
 
     margin-top: auto;
@@ -154,9 +163,9 @@ body{
     // 2. L= height of each special icon
     // 3. b= height of padding on top & bottom of each special icon
     // Sizings are based on the formula: h = 2*L+4*b, L<=h/2, factor 2.4 chosen arbitrarily
-    height: ($base-font-size+$der-1-font-size)/2.4;
-    padding-top: ($base-font-size+$der-1-font-size)/24;
-    padding-bottom: ($base-font-size+$der-1-font-size)/24;
+    height: math.div(($base-font-size+$der-1-font-size),2.4);
+    padding-top: math.div(($base-font-size+$der-1-font-size),24);
+    //padding-bottom: ($base-font-size+$der-1-font-size)/24; --> Bottom padding not necessaery!
 }
  // ------------------------------------------------------------
 
@@ -260,7 +269,7 @@ TO BE DELETED*/
     list-style: outside none none;
     //margin-left: 8%;
     //margin-right: 8%;
-    border: solid brown 2px;
+    // border: solid brown 2px;
 
 
     @media only screen and (max-width: $responsiveWidth){
@@ -313,46 +322,174 @@ TO BE DELETED*/
 // --------------- General for all groups and their texts ---------------
 
 .Group{
-    position: relative;
+    //position: relative;
     text-align: center;
-    border: solid white 1px;
+    border: solid black 1px;
+    border-radius: 5px;
     margin: 0px auto;
-    padding: 0px auto;
+    padding-left: 0.15%;
+    padding-right: 0.15%;
+    display:flex;
+
+    // background-color: lightcoral;
+    // opacity: 0.8;
+
 
     @media only screen and (min-width: $responsiveWidth){
         width: $responsiveWidth;
     }
 }
 
-// The background image : TBD ??
-#groupImage{
-    opacity: 0.5;
+.groupText{
+    overflow-wrap: break-word;
 }
 
-.groupText{
-    //position: absolute;
-    //overflow: scroll;
-    //height: 100%;
-    //left: 5%;
-    //right: 5%;
+.groupText>p{
+    padding-left: 0.5%;
+    text-align: left;
 }
 
 // ----------------------------------------------------------------------
 
 // Group 1 ("To  be filled"): Encapsulation for background
 #GroupCapsuleHome1{
-    background-color: lightcoral;
-    border: dotted orange 1px;
+    background-image: url("/static/images/Backgrounds/BG_2.jpeg");
+
+    display:flex;
+
+    border: dotted orange 2px;
     margin-top: 0px;
     padding-top: 0px;
 }
  
 // Group 2 ("To  be filled"): Encapsulation for background
 #GroupCapsuleHome2{
+    background-image: url("/static/images/Backgrounds/BG_3.jpeg");
+    //opacity: 0.3;
+    display:flex;
+
     background-color: lightcyan;
+
     border: dotted orange 1px;
     margin-top: 0px;
     padding-top: 0px;
+}
+
+#GroupCapsuleHome3{
+    background-image: url("/static/images/Backgrounds/BG_4.jpeg");
+
+    display:flex;
+    word-wrap: break-word;
+
+    border: dotted orange 2px;
+
+    margin: auto; 
+    padding: auto;
+}
+
+#GroupCapsuleHome4{
+    background-image: url("/static/images/Backgrounds/BG_5.jpeg");
+
+    display:flex;
+    word-wrap: break-word;
+
+    border: dotted orange 2px;
+
+    margin: auto; 
+    padding: auto;
+}
+
+
+
+.ImagesDIV{
+    position: relative;
+    display: flex;
+    margin: 0.5%;
+
+    background-color: blue;
+
+    width: 25%;
+    margin-right: auto; // Places div at the leftmost side of its parent
+    align-items: center;
+}
+
+.TextDIV{
+    overflow-wrap: break-word; // Splits words when reaching some boarder.
+    position: relative;
+    margin-left: auto; // Places div at the rightmost side of its parent
+    width: 75%;
+
+
+    /*
+    DEVELOPER COMMANDS
+    background-color: brown;
+    */
+
+}
+
+.TextDIV>p{
+    padding-left: 0.5%;    
+    text-align: left;
+}
+  
+
+.C_MENG_Images{
+    display: inline;
+    width: 50%;
+    height: 100%;
+    border: solid green 1px;
+
+
+    /*
+    DEVELOPER COMMANDS
+    border: solid white 2px;
+    background-color: blue;
+    */
+}
+
+.ProjectImage{
+    height: 48%;
+    width: 98%;    
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    
+
+    margin-top: 1%;
+
+    border: solid yellow 1px;
+
+
+    //margin-top: 2px; 
+    //margin-bottom: 2px; 
+
+    /*
+    DEVELOPER COMMANDS
+    background-color: blue;
+    */
+}
+
+#MENGimage1{
+    background-image: url("/static/images/MEngImages/ANSYSRotor.png");  
+}
+
+#MENGimage2{
+    background-image: url("/static/images/MEngImages/DiffEq.jpg");
+}
+
+#MENGimage3{
+   background-image: url("/static/images/MEngImages/AmplificationFactor2.png");   
+
+}
+
+#MENGimage4{
+   background-image: url("/static/images/MEngImages/ANSYSFlange.png");       
+}
+
+#SDEVimage{
+    background-image: url("/static/images/SDevImages/GenericCode.png");
+    height: 100%;
 }
 
 // ******************************************************************************************************
@@ -365,9 +502,11 @@ TO BE DELETED*/
     z-index: 2; // To ensure that it is in front of everything (not strictly necessary)
     background-color: lightgrey;
     text-align: center;
+
 }
 
 .footerParagraph{
+
    font-style: italic;
    font-size: 10px;
    padding-top: 0px;

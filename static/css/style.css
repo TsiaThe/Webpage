@@ -25,13 +25,11 @@ a:hover {
 
 html {
   background-size: cover;
-  background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin: 5% auto;
-  color: white;
+  color: black;
 }
 
 h1 {
@@ -51,18 +49,21 @@ body {
   padding: auto;
   line-height: 24px;
   font-weight: 400;
-  background-color: lightblue;
+  background-color: lightgreen;
   overflow-x: hidden;
 }
 
 .navBarCapsule {
+  background-image: url("/static/images/Backgrounds/BG_1.jpeg");
   border: dotted orange 1px;
 }
 
 .navBarGrid {
-  border: solid green 1px;
+  border: solid black 1px;
+  border-radius: 5px;
   position: relative;
   margin: 0px auto;
+  padding: 0.15%;
 }
 @media only screen and (min-width: 1000px) {
   .navBarGrid {
@@ -75,9 +76,13 @@ body {
   list-style: outside none none;
   margin-top: 0px;
   padding-top: 0px;
-  background-color: brown;
-  border: solid yellow 1px;
   position: relative;
+  padding: 0.25%;
+}
+@media only screen and (min-width: 1000px) {
+  .wrapperTitle {
+    border-bottom: solid black 1px;
+  }
 }
 
 #NameAndProfession {
@@ -96,7 +101,6 @@ body {
   margin-bottom: 0em;
   margin-left: 0em;
   margin-right: 0em;
-  background-color: blue;
   color: black;
 }
 
@@ -112,13 +116,11 @@ body {
   margin-bottom: 0em;
   margin-left: 0em;
   margin-right: 0em;
-  background-color: greenyellow;
   color: black;
 }
 
 .specialIconsGroup {
   margin-left: auto;
-  border: solid white 1px;
   display: block;
   margin-top: auto;
   margin-bottom: auto;
@@ -136,7 +138,6 @@ body {
   display: block;
   height: 26.9672331458px;
   padding-top: 2.6967233146px;
-  padding-bottom: 2.6967233146px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -216,7 +217,6 @@ TO BE DELETED*/
 .navList {
   display: flex;
   list-style: outside none none;
-  border: solid brown 2px;
 }
 @media only screen and (max-width: 1000px) {
   .navList {
@@ -252,11 +252,13 @@ TO BE DELETED*/
 }
 
 .Group {
-  position: relative;
   text-align: center;
-  border: solid white 1px;
+  border: solid black 1px;
+  border-radius: 5px;
   margin: 0px auto;
-  padding: 0px auto;
+  padding-left: 0.15%;
+  padding-right: 0.15%;
+  display: flex;
 }
 @media only screen and (min-width: 1000px) {
   .Group {
@@ -264,22 +266,122 @@ TO BE DELETED*/
   }
 }
 
-#groupImage {
-  opacity: 0.5;
+.groupText {
+  overflow-wrap: break-word;
+}
+
+.groupText > p {
+  padding-left: 0.5%;
+  text-align: left;
 }
 
 #GroupCapsuleHome1 {
-  background-color: lightcoral;
-  border: dotted orange 1px;
+  background-image: url("/static/images/Backgrounds/BG_2.jpeg");
+  display: flex;
+  border: dotted orange 2px;
   margin-top: 0px;
   padding-top: 0px;
 }
 
 #GroupCapsuleHome2 {
+  background-image: url("/static/images/Backgrounds/BG_3.jpeg");
+  display: flex;
   background-color: lightcyan;
   border: dotted orange 1px;
   margin-top: 0px;
   padding-top: 0px;
+}
+
+#GroupCapsuleHome3 {
+  background-image: url("/static/images/Backgrounds/BG_4.jpeg");
+  display: flex;
+  word-wrap: break-word;
+  border: dotted orange 2px;
+  margin: auto;
+  padding: auto;
+}
+
+#GroupCapsuleHome4 {
+  background-image: url("/static/images/Backgrounds/BG_5.jpeg");
+  display: flex;
+  word-wrap: break-word;
+  border: dotted orange 2px;
+  margin: auto;
+  padding: auto;
+}
+
+.ImagesDIV {
+  position: relative;
+  display: flex;
+  margin: 0.5%;
+  background-color: blue;
+  width: 25%;
+  margin-right: auto;
+  align-items: center;
+}
+
+.TextDIV {
+  overflow-wrap: break-word;
+  position: relative;
+  margin-left: auto;
+  width: 75%;
+  /*
+  DEVELOPER COMMANDS
+  background-color: brown;
+  */
+}
+
+.TextDIV > p {
+  padding-left: 0.5%;
+  text-align: left;
+}
+
+.C_MENG_Images {
+  display: inline;
+  width: 50%;
+  height: 100%;
+  border: solid green 1px;
+  /*
+  DEVELOPER COMMANDS
+  border: solid white 2px;
+  background-color: blue;
+  */
+}
+
+.ProjectImage {
+  height: 48%;
+  width: 98%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  margin-top: 1%;
+  border: solid yellow 1px;
+  /*
+  DEVELOPER COMMANDS
+  background-color: blue;
+  */
+}
+
+#MENGimage1 {
+  background-image: url("/static/images/MEngImages/ANSYSRotor.png");
+}
+
+#MENGimage2 {
+  background-image: url("/static/images/MEngImages/DiffEq.jpg");
+}
+
+#MENGimage3 {
+  background-image: url("/static/images/MEngImages/AmplificationFactor2.png");
+}
+
+#MENGimage4 {
+  background-image: url("/static/images/MEngImages/ANSYSFlange.png");
+}
+
+#SDEVimage {
+  background-image: url("/static/images/SDevImages/GenericCode.png");
+  height: 100%;
 }
 
 .footer {

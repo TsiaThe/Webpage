@@ -117,7 +117,7 @@ function addaptiveResponse() {
     //$specialIcons.css("padding", fontSspecialIconsH/10);
 
     // Group (image+text) of page
-    // $('.Group').css("height",windowCurrentHeight/1.4);
+    //$('.Group').css("height",windowCurrentHeight/1.4);
 
     // Image size based on window dimensions
     // var img = document.getElementById("groupImageID");
@@ -142,6 +142,11 @@ function addaptiveResponse() {
     }
     */
 
+    //var $EngineeringImage = $('.MENG_Image');
+    //$("MENGimage1").css("width", "100px");
+    //$("MENGimage1").css("height", "100px");
+    // $EngineeringImage.css("height", $EngineeringImage.height());
+    
 
     // Text in relation to image
     var $groupText = $('.groupText');
